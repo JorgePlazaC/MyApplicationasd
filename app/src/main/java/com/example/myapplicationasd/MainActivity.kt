@@ -9,6 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.example.myapplicationasd.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -32,6 +33,32 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+        Toast.makeText(this,"onCreate",Toast.LENGTH_SHORT).show();
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        Toast.makeText(this,"onStart",Toast.LENGTH_SHORT).show();
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        Toast.makeText(this,"onResume",Toast.LENGTH_SHORT).show();
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        Toast.makeText(this,"onStop",Toast.LENGTH_SHORT).show();
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        Toast.makeText(this,"onDestroy",Toast.LENGTH_SHORT).show();
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
